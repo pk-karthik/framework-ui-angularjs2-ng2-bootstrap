@@ -1,5 +1,5 @@
 /* tslint:disable */
-export const ngdoc = {
+export const ngdoc: any = {
   "AccordionPanelComponent": {
     "fileName": "src/accordion/accordion-group.component.ts",
     "className": "AccordionPanelComponent",
@@ -194,7 +194,7 @@ export const ngdoc = {
       {
         "name": "interval",
         "type": "number",
-        "description": "<p>Delay of item cycling in milliseconds. If false, carousel won&#39;t cycle automatically. </p>\n"
+        "description": "<p>Delay of item cycling in milliseconds. If false, carousel won&#39;t cycle automatically.</p>\n"
       },
       {
         "name": "noPause",
@@ -366,6 +366,7 @@ export const ngdoc = {
     "className": "CollapseDirective",
     "description": "",
     "selector": "[collapse]",
+    "exportAs": "bs-collapse",
     "inputs": [
       {
         "name": "collapse",
@@ -1510,6 +1511,11 @@ export const ngdoc = {
         "description": "<p>style object for item </p>\n"
       },
       {
+        "name": "itemTemplate",
+        "type": "TemplateRef<any>",
+        "description": "<p>used to specify a custom item template. Template variables: item and index; </p>\n"
+      },
+      {
         "name": "placeholderClass",
         "type": "string",
         "description": "<p>class name for placeholder </p>\n"
@@ -2006,6 +2012,11 @@ export const ngdoc = {
         "name": "container",
         "type": "string",
         "description": "<p>A selector specifying the element the typeahead should be appended to.\nCurrently only supports &quot;body&quot;.</p>\n"
+      },
+      {
+        "name": "optionsListTemplate",
+        "type": "TemplateRef<any>",
+        "description": "<p>used to specify a custom options list template. Template variables: matches, itemTemplate, query </p>\n"
       },
       {
         "name": "typeahead",

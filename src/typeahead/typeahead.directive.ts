@@ -18,11 +18,7 @@ import { ComponentLoaderFactory, ComponentLoader } from '../component-loader';
 /* tslint:disable-next-line */
 const KeyboardEvent = (global as any).KeyboardEvent as KeyboardEvent;
 
-@Directive({
-  /* tslint:disable */
-  selector: '[typeahead][ngModel],[typeahead][formControlName]'
-  /* tslint:enable */
-})
+@Directive({selector: '[typeahead]'})
 export class TypeaheadDirective implements OnInit, OnDestroy {
   /** options source, can be Array of strings, objects or an Observable for external matching process */
   @Input() public typeahead: any;
@@ -48,6 +44,8 @@ export class TypeaheadDirective implements OnInit, OnDestroy {
   @Input() public typeaheadPhraseDelimiters: string = '\'"';
   /** used to specify a custom item template. Template variables exposed are called item and index; */
   @Input() public typeaheadItemTemplate: TemplateRef<any>;
+  /** used to specify a custom options list template. Template variables: matches, itemTemplate, query */
+  @Input() public optionsListTemplate: TemplateRef<any>;
 
   /** fired when 'busy' state of this component was changed, fired on async mode only, returns boolean */
   @Output() public typeaheadLoading: EventEmitter<boolean> = new EventEmitter();
